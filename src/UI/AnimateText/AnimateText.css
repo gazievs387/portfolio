@@ -1,0 +1,15 @@
+
+
+
+div[data-animate] p > div {
+    background: linear-gradient(
+        to right,
+        var(--color-muted-foreground) 50%,
+        rgb(37, 37, 37) 50%
+    );
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
