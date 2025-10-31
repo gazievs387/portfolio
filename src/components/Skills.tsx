@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/UI/Card";
+import { isMdMediaQuery } from "@/utils/isMdMediaQuery";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,19 +54,21 @@ const skillCategories = [
 
 export function Skills() {
     useGSAP(() => {
-        const pinGroupContent = gsap.utils.toArray(".skills > *");
+        const isMdMedia = isMdMediaQuery()
+        
+        const pinGroupContent = gsap.utils.toArray(`.skills ${isMdMedia ? "div[data-slot=card]" : "> *"}`);
 
         gsap.set(pinGroupContent, {
             opacity: 0,
             y: 100
         });
 
-        pinGroupContent.forEach((e: any) => {
+        pinGroupContent.forEach((e: any, index: number) => {
             ScrollTrigger.create({
                 trigger: e,
                 start: "top 80%",
                 end: "bottom 40%",
-                onEnter: () => gsap.to(e, { y: 0, opacity: 1, duration: 0.8 }),
+                onEnter: () => gsap.to(e, { delay: isMdMedia ? index * 0.2 : 0, y: 0, opacity: 1, duration: 0.8 }),
                 onLeaveBack: () => gsap.to(e, { y: 100, opacity: 0, duration: 0.4 })
             });
         });
