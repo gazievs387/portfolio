@@ -1,3 +1,5 @@
+'use client';
+
 import { Badge } from "@/UI/Badge";
 import {
   Card,
@@ -6,6 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/UI/Card";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
 const skillCategories = [
@@ -42,9 +50,30 @@ const skillCategories = [
   },
 ];
 
+
 export function Skills() {
+    useGSAP(() => {
+        const pinGroupContent = gsap.utils.toArray(".skills > *");
+
+        gsap.set(pinGroupContent, {
+            opacity: 0,
+            y: 100
+        });
+
+        pinGroupContent.forEach((e: any) => {
+            ScrollTrigger.create({
+                trigger: e,
+                start: "top 80%",
+                end: "bottom 40%",
+                onEnter: () => gsap.to(e, { y: 0, opacity: 1, duration: 0.8 }),
+                onLeaveBack: () => gsap.to(e, { y: 100, opacity: 0, duration: 0.4 })
+            });
+        });
+    })
+
+
     return (
-        <section className="py-20 px-4 bg-muted/30">
+        <section className="skills py-20 px-4 bg-muted/30">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-balance">
                     Технологии & Стек
