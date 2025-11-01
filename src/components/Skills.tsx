@@ -69,7 +69,7 @@ export function Skills() {
                 start: "top 80%",
                 end: "bottom 40%",
                 onEnter: () => gsap.to(e, { delay: isMdMedia ? index * 0.2 : 0, y: 0, opacity: 1, duration: 0.8 }),
-                onLeaveBack: () => gsap.to(e, { y: 100, opacity: 0, duration: 0.4 })
+                onLeaveBack: () => !isMdMedia && gsap.to(e, { y: 100, opacity: 0, duration: 0.4 })
             });
         });
     })
