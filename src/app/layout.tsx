@@ -41,7 +41,7 @@ export default function RootLayout({
                                 for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
                                 k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
                             })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105075784', 'ym');
-                            ym(105075784, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+                            ym(105075784, 'init', {ssr:true, webvisor:true, defer: true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
                             `}
                         </Script>
                         <noscript><div><img src="https://mc.yandex.ru/watch/105075784" style={{position: "absolute", left: "-9999px"}} alt="" /></div></noscript>
