@@ -17,11 +17,11 @@ export function Hero() {
             </p>
 
             <div className="flex justify-center items-center text-foreground gap-3 mb-8">
-                <LinkButton size="lg" href="#projects">
+                <LinkButton size="lg" href="/#projects">
                     Мои Проекты
                 </LinkButton>
 
-                <LinkButton variant="outline" size="lg" href="#contacts">
+                <LinkButton variant="outline" size="lg" href="/#contacts">
                     Контакты
                 </LinkButton>
             </div>
