@@ -44,7 +44,7 @@ export function Hero() {
                 </Tooltip>
             </div>
 
-            <div className="animate-in [animation-delay:1300ms] animate-forwards opacity-0 absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground">
+            <div className="animate-in [animation-delay:1300ms] animate-forwards opacity-0 absolute bottom-16 left-1/2 -translate-x-1/2 text-muted-foreground">
                 <LuArrowDown size={25} className="animate-bounce" />
             </div>
         </section>
