@@ -8,15 +8,15 @@ import { MdOutlineEmail } from "react-icons/md";
 export function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4">
-            <h1 className="text-foreground text-5xl md:text-7xl font-bold text-balance mb-4">
+            <h1 className="animate-in [animation-delay:100ms] animate-forwards opacity-0 text-foreground text-5xl md:text-7xl font-bold text-balance mb-4">
                 Саид Газиев
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-8">
+            <p className="animate-in [animation-delay:390ms] animate-forwards opacity-0 text-xl md:text-2xl text-muted-foreground text-balance mb-8">
                 Frontend-разработчик React, Next.js
             </p>
 
-            <div className="flex justify-center items-center text-foreground gap-3 mb-8">
+            <div className="animate-in [animation-delay:700ms] animate-forwards opacity-0 flex justify-center items-center text-foreground gap-3 mb-8">
                 <LinkButton size="lg" href="/#projects">
                     Мои Проекты
                 </LinkButton>
@@ -26,7 +26,7 @@ export function Hero() {
                 </LinkButton>
             </div>
 
-            <div className="flex justify-center items-center gap-5 mt-8">
+            <div className="animate-in [animation-delay:1000ms] animate-forwards opacity-0 flex justify-center items-center gap-5 mt-8">
                 <Link
                     target="_blank"
                     rel="noopener noreferrer"
@@ -44,8 +44,8 @@ export function Hero() {
                 </Tooltip>
             </div>
 
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground animate-bounce">
-                <LuArrowDown size={25} />
+            <div className="animate-in [animation-delay:1300ms] animate-forwards opacity-0 absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground">
+                <LuArrowDown size={25} className="animate-bounce" />
             </div>
         </section>
     )

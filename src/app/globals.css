@@ -76,6 +76,23 @@
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-selection: var(--selection);
+    --animate-in: in 1s ease-in-out;
+
+    @keyframes in {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+}
+
+@utility animate-forwards {
+    animation-fill-mode: forwards;
 }
 
 
