@@ -1,5 +1,9 @@
-## My Portfolio
+# Мой сайт
 
-My portfolio site.
+![Скриншот главной страницы вашего портфолио](https://gaziev-s.ru/portfolio-image.png)
 
-You can see it here: https://gaziev-s.ru 
+> [!NOTE]
+> Это репозиторий с исходным кодом моего личного сайта-портфолио.
+> **Посмотреть вживую: [https://gaziev-s.ru](https://gaziev-s.ru )**
+
+Мой Email: gazievs387@gmail.com
